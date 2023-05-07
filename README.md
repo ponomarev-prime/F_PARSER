@@ -36,6 +36,6 @@ response.content содержит HTML-код страницы в виде ба�
 Без парсинга:
 ![](.gitcontent/flask1.png)
 
-## It's work!
+## It's works!
 
 ![](.gitcontent/flask2.png)

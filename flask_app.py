@@ -1,10 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 import sqlite3
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    print(f"URL :: {url_for('index')}")
+    
     # Создаем подключение к базе данных
     conn = sqlite3.connect('news.db')
 
@@ -24,4 +26,4 @@ def index():
     return render_template('index.html', rows=rows, table_name='Google_News')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
